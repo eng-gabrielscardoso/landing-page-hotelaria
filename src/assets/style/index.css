@@ -1,0 +1,230 @@
+@keyframes bounce {
+    from {
+        margin-top: -5px;
+    } to {
+        margin-bottom: -5px;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+header, footer{ background-color: #dcdcdc; }
+
+header > .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 2%;
+}
+
+header img,
+footer img {
+    width: 156px;
+}
+
+section.banner{
+    position: relative;
+    min-height: 70%;
+    background-image: url('../img/layout/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+section.banner .wrapper-form{
+    position: absolute;
+    top: -2.5%;
+    right: 12%;
+    width: 400px;
+    height: 105%;
+    border-radius: 6px;
+    box-shadow: 6px 6px 15px 1px rgba(0,0,0,0.57);
+    background-color: #FFFFFF;
+}
+.wrapper-form .title-form {
+    padding: 35px 10px;
+    background-color: #dcdcdc;
+}
+.wrapper-form .title-form p{
+    font-weight: 300;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.wrapper-form form{
+    padding: 20px 20px;
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.wrapper-form form .group-form{
+    display: flex;
+    flex-direction: column;
+}
+.wrapper-form form .group-form label{
+    color: #555555;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.wrapper-form form .group-form input{
+    height: 45px;
+    padding-left: 5px;
+    border: 1px solid #cccccc;
+}
+.wrapper-form form input[type=submit]{
+    height: 50px;
+    width: 70%;
+    margin: 0 auto;
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border: 0;
+    background-color: #346889;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.wrapper-form form input[type=submit]:hover{
+    width: 75%;
+    transition: 0.2s;
+}
+.wrapper-form form input[type=submit]:active{
+    background-color: #29526d;
+    border: 1px solid #dcdcdc;
+    transition: 0.1s;
+}
+.wrapper-form form span{
+    color: #555555;
+    font-size: 0.9rem;
+}
+
+section.headline{
+    min-height: 25%;
+    background-color: #29526d;
+}
+
+section.headline .arrow {
+    position: relative;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #346889;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.arrow h2{
+    animation: bounce 0.5s infinite alternate;
+    font-size: 2.4rem;
+    color: #FFFFFF; 
+}
+
+section.headline .content{ text-align: center; color: #FFFFFF; }
+section.headline .content h1{ font-size: 2rem; font-weight: 400; }
+section.headline .content h2{ 
+    padding-bottom: 30px;
+    font-size: 1rem; 
+    font-weight: 300; 
+}
+
+main{
+    width: 100%;
+    padding: 2% 2%;
+}
+main .wrapper-contents {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.wrapper-single-content{
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #dcdcdc;
+    border-radius: 6px;
+}
+.content-banner img{
+    width: 360px;
+}
+.content-information{
+    width: 100%;
+    text-align: justify;
+}
+
+footer > .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 72px;
+}
+
+@media screen and (max-width: 1190px) {
+    .wrapper-form{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (max-width: 486px) {
+    header {
+        padding: 10px 0;
+    }
+    header > .container{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .wrapper-form{
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 394px) {
+    .wrapper-single-content{
+        display: flex;
+        flex-direction: column;
+        width: 290px;
+        margin-bottom: 10px;
+        padding: 10px;
+        background-color: #dcdcdc;
+        border-radius: 6px;
+    }
+    .content-banner img{
+        width: 270px;
+    }
+}
+
+@media screen and (max-height: 716px) {
+    section.banner{
+        height: 100%;
+    }
+    section.banner .wrapper-form {
+        height: 100%;
+    }
+}
