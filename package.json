@@ -2,9 +2,9 @@
   "name": "landing-page-hotelaria",
   "version": "1.0.0",
   "description": "Landing page de hotelaria, desenvolvida com HTML5, CSS3, Javascript e NodeJS + Express",
-  "main": "./src/main.js",
+  "main": "./src/index.js",
   "scripts": {
-    "start": "node ./src/main.js",
+    "start": "node ./src/index.js",
     "test": "nodemon"
   },
   "repository": {
