@@ -1,0 +1,35 @@
+{
+  "name": "landing-page-hotelaria",
+  "version": "1.0.0",
+  "description": "Landing page de hotelaria, desenvolvida com HTML5, CSS3, Javascript e NodeJS + Express",
+  "main": "./src/main.js",
+  "scripts": {
+    "start": "node ./src/main.js",
+    "test": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eng-gabrielscardoso/landing-page-hotelaria.git"
+  },
+  "keywords": [
+    "Landing page",
+    "Hotelaria",
+    "HTML5",
+    "CSS3",
+    "Javascript",
+    "NodeJS",
+    "Express"
+  ],
+  "author": "Gabriel Santos Cardoso",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eng-gabrielscardoso/landing-page-hotelaria/issues"
+  },
+  "homepage": "https://github.com/eng-gabrielscardoso/landing-page-hotelaria",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
