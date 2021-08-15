@@ -8,7 +8,7 @@ const path = require('path');
 // Local variables
 const app = express();
 const port = process.env.PORT || 3000;
-const user = process.env.USERNAME;
+const user = process.env.USERMAIL;
 const pass = process.env.PASSWORD;
 
 app.use(express.static(path.join(__dirname, '/')));
@@ -25,8 +25,8 @@ app.post('/send', (req, res) => {
     let phoneForm = req.body.phoneForm;
 
     const transporter = nodeMailer.createTransport({
-        host: 'smtp.gmail.com',
-        port: 587,
+        host: process.env.HOSTMAIL,
+        port: process.env.PORTMAIL,
         auth: { user, pass }
     });
 
@@ -34,7 +34,7 @@ app.post('/send', (req, res) => {
         from: user,
         to: emailForm,
         replyTo: user,
-        subject: "Formulário de cadastro",
+        subject: 'Formulário de cadastro',
         text: `Olá, ${nameForm}, muito obrigado por se cadastrar em nossa página!`,
     }).then(info => {
         res.send('Formulário enviado com sucesso!');

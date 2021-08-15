@@ -35,6 +35,28 @@ Com as dependências do projeto instaladas, basta rodar o comando para servir a 
 npm start
 ```
 
+### Configuração do disparo de e-mails
+
+Para utilizar o disparo de e-mails pelo Nodemailer, primeiramente deve-se ter uma conta de e-mail devidamente configurada para tal.
+
+Por questões de segurança, a aplicação está configurada para receber os dados sensíveis de disparo de e-mail (como senhas) em variáveis de ambiente definidas pelo próprio usuário que irá utilizar a aplicação.
+
+Na raiz do projeto, crie ficheiro .env para armazenar as variáveis a serem utilizadas, e nele insira as seguintes informações:
+
+```
+USERMAIL = <Endereço da conta que efetuará o disparo>
+PASSWORD = <Senha da conta de e-mail>
+HOSTMAIL = <Servidor de disparo>
+PORTMAIL = <Porta a ser utilizada>
+```
+
+>Informações acerca do host e da porta podem ser encontrados a partir do servidor da conta a ser utilizada.
+> A exempo, tem-se o Gmail, que utiliza como host **smtp.gmail.com** e como portas utiliza a porta **465**, para SSL, e a porta **587** para TLS.
+
+Após a configuração das variáveis de ambiente basta iniciar a aplicação que os disparos estarão plenamente operando.
+
+>Não se preocupe com os detalhes pessoais da sua conta, eles estarão sendo utilizados apenas em seu computador.
+
 ## Agradecimentos
 
 Apesar da interface simples e propósito simples, o projeto auxiliou na prática do desenvolvimento web full-stack, bem como na possibilidade de escalar um projeto simples visto no curso de WebMaster FrontEnd, da &copy;Danki Code.
